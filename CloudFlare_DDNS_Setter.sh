@@ -108,7 +108,7 @@ choose_service(){
 }
 
 get_record(){
-curl -X GET "https://api.cloudflare.com/client/v4/zones/${zone_id}/dns_records?type=A&name${domain}&order=name" \
+curl -X GET "https://api.cloudflare.com/client/v4/zones/${zone_id}/dns_records?type=A&name=${domain}&order=name" \
 	 -H "X-Auth-Email: ${email}" \
 	 -H "X-Auth-Key: ${api_key}" \
 	 -H "Content-Type: application/json"
